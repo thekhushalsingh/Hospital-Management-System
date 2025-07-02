@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login - Hospital Reservation System</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h2>User Login</h2>
+    <form method="post">
+        Username: <input type="text" name="username" required>
+        Password: <input type="password" name="password" required>
+        <input type="submit" value="Login">
+    </form>
+    <p class="message">{{ msg }}</p>
+    <a class="btn btn-secondary" href="/register_user">New User? Register here</a>
+</div>
+
+<div class="footer">
+    Developed by Khushal Singh. © All rights reserved.
+</div>
+
+</body>
+</html>

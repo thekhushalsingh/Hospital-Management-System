@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generate Bill</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script>
+        function printBill() {
+            var printContents = document.getElementById('bill_output').innerHTML;
+            var originalContents = document.body.innerHTML;
+            document.body.innerHTML = printContents;
+            window.print();
+            document.body.innerHTML = originalContents;
+        }
+    </script>
+</head>
+<body>
+<div class="container">
+    <h2>Generate Bill</h2>
+    <form method="post">
+        <div class="form-group">
+            <label>Username:</label>
+            <input type="text" name="username" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label>Room Number:</label>
+            <input type="text" name="room_number" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Generate Bill</button>
+    </form>
+
+    {% if bill_details %}
+    <div id="bill_output" class="alert alert-info mt-3">
+        <h4>Bill Details:</h4>
+        <pre>{{ bill_details }}</pre>
+    </div>
+
+    <button onclick="printBill()" class="btn btn-success mt-2">Print Bill</button>
+
+    <form method="post" action="/download_bill" style="display: inline;">
+        <input type="hidden" name="bill_text" value="{{ bill_details }}">
+        <button type="submit" class="btn btn-secondary mt-2">Download as TXT</button>
+    </form>
+    {% endif %}
+
+    <p class="mt-2 text-success">{{ msg }}</p>
+    <a href="/" class="btn btn-secondary mt-3">Go Home</a>
+</div>
+<div class="footer">
+    Developed by Khushal Singh. © All rights reserved.
+</div>
+
+</body>
+</html>

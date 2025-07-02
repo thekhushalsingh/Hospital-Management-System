@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hospital Room Reservation - Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .welcome-box {
+            margin-top: 10px;
+            padding: 40px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .welcome-box h1 {
+            color:rgb(18, 67, 119);
+            margin-bottom: 30px;
+        }
+        .welcome-box a.btn {
+            width: 200px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="welcome-box">
+        <h1>Welcome to Hospital Room Reservation </h1>
+        <a href="/login" class="btn btn-primary">Login</a><br>
+        <a href="/register_user" class="btn btn-success">New User Register</a>
+    </div>
+</div>
+
+<div class="footer">
+    Developed by Khushal Singh. © All rights reserved.
+</div>
+
+</body>
+</html>
+
