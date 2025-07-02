@@ -48,9 +48,7 @@ It enables hospital staff to:
 HospitalRoomReservation/
 ├── app.py
 ├── requirements.txt
-├── Procfile
-├── hospital_reservation.db
-├── hospital_reservation_sqlite.sql
+├── hospital_reservation_scheme.sql
 ├── static/
 │    └── style.css
 ├── templates/
