@@ -78,6 +78,9 @@ HospitalRoomReservation/
 ---
 
 ## ✅ Screenshots:
+### 🔐 Home Page:
+
+![Home](screenshots/home.png)
 
 ### 🔐 Login Page:
 
