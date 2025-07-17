@@ -167,3 +167,12 @@ http://127.0.0.1:5000/
 
 **Khushal Singh**  
 > **© 2025 All rights reserved**
+
+## Contact Information
+
+- **Name**: Khushal
+- **User ID**: CT_CSI_SQ_5459
+- **Email**: khushalsingh9445@gmail.com  
+- **LinkedIn**: [thekhushalsingh](https://linkedin.com/in/thekhushalsingh)
+
+
